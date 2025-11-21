@@ -233,3 +233,235 @@ $ → end
 ```
 
 ---
+
+# ✅ **Practical Regex Coding Questions (With Answers)**
+
+---
+
+## 🔹 **1. Extract all numbers from a string**
+### **Question**  
+Given:  
+```
+"Order ID: 451, Amount: 1200, Discount: 15%"
+```
+Write a regex to extract all numbers.
+
+### **Answer**
+```
+\d+
+```
+
+---
+
+## 🔹 **2. Validate a password (8+ chars, upper, lower, digit, special char)**
+### **Question**  
+Your API requires strong passwords. Write a regex.
+
+### **Answer**
+```
+^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$
+```
+
+---
+
+## 🔹 **3. Extract email addresses from a paragraph**
+### **Question**  
+Given a large text, extract all emails.
+
+### **Answer**
+```
+[\w.-]+@[\w.-]+\.\w{2,}
+```
+
+---
+
+## 🔹 **4. Validate IPv4 address**
+### **Question**  
+Write a regex to validate any IPv4:
+
+### **Answer**  
+(Simplified)
+```
+^(\d{1,3}\.){3}\d{1,3}$
+```
+
+---
+
+## 🔹 **5. Match only Bangladeshi phone numbers (with or without +88)**
+Examples that should match:  
+`+8801712345678`, `01712345678`
+
+### **Answer**
+```
+^(\+?88)?01[3-9]\d{8}$
+```
+
+---
+
+## 🔹 **6. Extract all hashtags from a text**
+### **Question**  
+Input:
+```
+Learning #CSharp and #DotNet is fun!
+```
+
+### **Answer**
+```
+#\w+
+```
+
+---
+
+## 🔹 **7. Check if a string contains only alphabets**
+### **Answer**
+```
+^[A-Za-z]+$
+```
+
+---
+
+## 🔹 **8. Extract domain names from URLs**
+### **Question**  
+From:
+```
+https://www.google.com/search
+https://chat.openai.com
+```
+Extract domain only.
+
+### **Answer**
+```
+https?:\/\/([^\/]+)
+```
+
+Captured group 1 → domain.
+
+---
+
+## 🔹 **9. Split a string on commas or semicolons**
+### **Question**  
+Split:
+```
+"apple,banana;orange,mango;grapes"
+```
+
+### **Answer**
+```
+[,;]
+```
+
+---
+
+## 🔹 **10. Extract the file extension**
+### **Question**  
+File names:
+```
+document.pdf
+report.docx
+image.jpeg
+```
+
+### **Answer**
+```
+\.(\w+)$
+```
+
+Captured group 1 → extension
+
+---
+
+## 🔹 **11. Validate username (3–15 chars, letters/numbers/underscore)**
+### **Answer**
+```
+^\w{3,15}$
+```
+
+---
+
+## 🔹 **12. Extract currency values**
+Input:
+```
+$120, €500, BDT 3000
+```
+
+### **Answer**
+```
+([$€]|BDT)\s?\d+
+```
+
+---
+
+## 🔹 **13. Remove all whitespace**
+### **Answer**
+```
+\s+
+```
+
+---
+
+## 🔹 **14. Validate date YYYY-MM-DD**
+### **Answer**
+```
+^\d{4}-\d{2}-\d{2}$
+```
+
+---
+
+## 🔹 **15. Extract HTML tag names**
+Input:
+```
+<div>Hello</div><span>World</span>
+```
+
+### **Answer**
+```
+<(\w+)
+```
+
+Captured → `div`, `span`
+
+---
+
+## 🔹 **16. Extract course code like CSE101 from text**
+### **Answer**
+```
+CSE\d+
+```
+
+---
+
+## 🔹 **17. Check if string starts with “admin”**
+### **Answer**
+```
+^admin
+```
+
+---
+
+# 🔹 **18. Validate BD NID (10 or 17 digits)**
+### **Answer**
+```
+^\d{10}(\d{7})?$
+```
+
+---
+
+## 🔹 **19. Extract words starting with capital letter**
+Example: "John lives in Dhaka Bangladesh".
+
+### **Answer**
+```
+\b[A-Z][a-zA-Z]*\b
+```
+
+---
+
+## 🔹 **20. Extract everything inside parentheses**
+Example: `"User(name)"`
+
+### **Answer**
+```
+\((.*?)\)
+```
+
+---
